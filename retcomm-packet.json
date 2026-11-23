@@ -1,0 +1,98 @@
+{
+  "format_version": 1,
+  "id": "gex-enter-the-gecko-psx",
+  "name": "Gex - Enter the Gecko",
+  "kind": "recomp",
+  "platform": "psx",
+  "source_repo": "gex-enter-the-gecko-recomp",
+  "rom_identity": {
+    "crc32": [
+      "11650a57"
+    ],
+    "md5": [
+      "078092d2434011a12d5c56da4de0eeb4"
+    ],
+    "sha1": [
+      "85d01c18d0087e09dea9abed4aa92148400d2614"
+    ],
+    "disc_serials": [
+      "SLUS-00598"
+    ],
+    "sizes": [
+      266662704
+    ],
+    "filenames": [
+      "Gex - Enter the Gecko (USA).cue",
+      "Gex - Enter the Gecko (USA).bin"
+    ],
+    "track_counts": [
+      1
+    ],
+    "disc_fps": [
+      "4187c1ed41841819ac5d1f524e602f111d61b0ecf989d0bf5e4d70bc7c45a289"
+    ],
+    "require_cue": true
+  },
+  "rom_extensions": [
+    ".cue",
+    ".bin",
+    ".chd"
+  ],
+  "bios_identity": {
+    "required": true,
+    "name": "SCPH1001.BIN",
+    "profile": "SCPH1001",
+    "crc32": [
+      "37157331"
+    ],
+    "md5": [
+      "924e392ed05558ffdb115408c263dccf"
+    ],
+    "sha1": [
+      "10155d8d6e6e832d6ea66db9bc098321fb5e8ebf"
+    ],
+    "sha256": [
+      "71af94d1e47a68c11e8fdb9f8368040601514a42a5a399cda48c7d3bff1e99d3"
+    ],
+    "sizes": [
+      524288
+    ],
+    "filenames": [
+      "SCPH1001.BIN"
+    ]
+  },
+  "release": {
+    "github": "alexbeavs-ps1-ports/gex-enter-the-gecko-recomp",
+    "allow_prerelease": false,
+    "asset_glob": {
+      "windows-x64": "gex-enter-the-gecko-*-windows-x64.zip",
+      "linux-x64": "gex-enter-the-gecko-*-linux-x64.zip",
+      "macos-arm64": "gex-enter-the-gecko-*-macos-arm64.zip",
+      "macos-x64": "gex-enter-the-gecko-*-macos-x64.zip"
+    }
+  },
+  "launch": {
+    "windows": "gex_enter_the_gecko.exe",
+    "linux": "gex_enter_the_gecko",
+    "macos": "gex_enter_the_gecko"
+  },
+  "build": {
+    "source": {
+      "github": "alexbeavs-ps1-ports/gex-enter-the-gecko-recomp",
+      "ref": ""
+    },
+    "toolchain": {
+      "id": "cmake-clang-v1",
+      "min_version": "1.0.14"
+    },
+    "generate": {
+      "engine": "psxrecomp",
+      "config": "game.toml"
+    },
+    "cmake": {
+      "build_dir": "build",
+      "target": "psx-runtime",
+      "config": "Release"
+    }
+  }
+}
